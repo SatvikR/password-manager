@@ -13,5 +13,7 @@ This is a password manager written in python meant to be run as a personal on lo
 
 ## Run locally
 
+- First make sure you have at least python 3.6 or later
 - Run `setup_db.py`
 - Run `pip install -r requirements.txt` in a venv (or not), use `pip3` if needed
+- Run `python app.py`, use `python3` if needed
