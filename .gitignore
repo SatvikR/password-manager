@@ -1,0 +1,9 @@
+# Python Generated files
+venv/
+__pycache__/
+
+# Editor Files
+.vscode/
+
+# Bin files
+*.sqlite

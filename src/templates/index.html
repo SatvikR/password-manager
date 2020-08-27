@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <h1>Password Manager?</h1>
+    <hr class="divider" />
+    {% if logged_in %}
+    <h2>Welcome:</h2>
+    <h2><b>{{username}}</b></h2>
+    {% else %}
+    <h2>Click <a href="#">here</a> to login</h2>
+    {% endif %}
+    <h3>Welcome to the password manager</h3>
+    <h3><b>Made With:</b></h3>
+    <ul>
+        <li>Python</li>
+        <li>Flask</li>
+        <li>Sqlite</li>
+    </ul>
+</div>
+{% endblock body %}

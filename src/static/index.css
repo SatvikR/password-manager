@@ -1,0 +1,31 @@
+.container {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.title {
+  color: darkgray;
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #252323;
+  position: sticky;
+  margin: 0;
+  padding: 1%;
+}
+
+.navbar li {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.navbar li a {
+  font-size: larger;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
