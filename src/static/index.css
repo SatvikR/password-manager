@@ -11,17 +11,23 @@
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: #252323;
-  margin-top: -1%;
+  margin-top: -10px;
   margin-left: -2%;
   margin-right: -2%;
-  padding: 2%;
 }
 
 .navbar li {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 25px;
+  padding-top: 28px;
+}
+
+.navbar li:hover {
+  background-color: #000000;
 }
 
 .navbar li a {
