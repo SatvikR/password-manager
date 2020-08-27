@@ -21,13 +21,11 @@
         {% block head %} {% endblock head %}
     </head>
     <body>
-        <nav>
-            <ul class="navbar">
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('your_passwords') }}">Your Passwords</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-            </ul>
-        </nav>
+        <ul class="navbar">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('your_passwords') }}">Your Passwords</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+        </ul>
         {% block body %} {% endblock body %}
     </body>
 </html>
