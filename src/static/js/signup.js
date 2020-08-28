@@ -1,6 +1,6 @@
 // Password Verification for signup.html
 
-const test = (form) => {
+const verifySignup = (form) => {
   const match = form.password.value === form.password_verify.value;
 
   if (!match) {
