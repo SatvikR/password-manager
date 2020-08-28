@@ -1,6 +1,20 @@
 {% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+<script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+{% endblock head %}
 {% block body %}
 <div class="container">
-    <h1>Signup</h1>
+    <div id="password_fail"></div>
+    <h1>Signup:</h1>
+    <form method="POST" class="form" onsubmit="return test(this)">
+        <label for="username">Username</label>
+        <input type="text" name="username" class="input-field" placeholder="ex. username123" required> 
+        <label for="password">Password</label>
+        <input type="password" name="password" class="input-field" placeholder="ex. password123" required>
+        <label for="password_verify">Verify Password</label>
+        <input type="password" name="password_verify" class="input-field" placeholder="ex. password123" required>
+        <input type="submit" value="Submit" class="submit">
+    </form>
 </div>
 {% endblock body %}
