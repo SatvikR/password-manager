@@ -5,10 +5,6 @@
   margin-right: 20%;
 }
 
-.title {
-  color: darkgray;
-}
-
 .navbar {
   display: flex;
   list-style-type: none;

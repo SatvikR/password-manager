@@ -1,10 +1,11 @@
 /* Used for Login and Signup */
+
 .input-field {
-  width: 100%;
+  width: 98%;
   margin-top: 10px;
   margin-bottom: 20px;
   height: 20px;
-  border-radius: 10px;
+  border-radius: 7px;
   font-size: large;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -22,7 +23,6 @@
 }
 
 .submit {
-  font-family: "Open Sans";
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 20px;

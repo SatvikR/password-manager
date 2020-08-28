@@ -1,5 +1,5 @@
 /* Adds Open Sans from google fonts */
 
-body {
+body * {
   font-family: "Open Sans";
 }
