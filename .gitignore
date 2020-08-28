@@ -7,3 +7,6 @@ __pycache__/
 
 # Bin files
 *.sqlite
+
+# secret files
+secret_key.txt

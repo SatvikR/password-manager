@@ -18,6 +18,11 @@
             type="text/css"
             href="{{ url_for('static', filename='index.css') }}"
         />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{{ url_for('static', filename='flash.css') }}"
+        />
         {% block head %} {% endblock head %}
     </head>
     <body>
@@ -26,6 +31,15 @@
             <li><a href="{{ url_for('your_passwords') }}">Your Passwords</a></li>
             <li><a href="{{ url_for('login') }}">Login</a></li>
         </ul>
+        <div class="container">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="message">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
         {% block body %} {% endblock body %}
     </body>
 </html>

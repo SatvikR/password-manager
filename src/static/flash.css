@@ -1,0 +1,13 @@
+/* Styles for flashed messages */
+
+.message {
+  border: 1px solid #ff000f;
+  margin: 5px 0 5px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  color: #ff000f;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #ffcccb;
+}

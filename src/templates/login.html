@@ -4,14 +4,21 @@
 {% endblock head %}
 {% block body %}
 <div class="container">
+    {% if logged_in %}
+    <h1>Logged in as {{ username }}</h1>
+    <form method="POST">
+        <input type="submit" value="Logout" class="submit" name="logout">
+    </form>
+    {% else %}
     <h1>Login:</h1>
     <form method="POST" class="form">
         <label for="username">Username</label>
-        <input type="text" placeholder="ex. username123" class="input-field">
+        <input type="text" placeholder="ex. username123" class="input-field" name="username">
         <label for="password">Password</label>
-        <input type="password" placeholder="ex. password123" class="input-field">
+        <input type="password" placeholder="ex. password123" class="input-field" name="password">
         <input type="submit" value="Submit" class="submit">
     </form>
     <small>Don't have an account? <a href="{{ url_for('signup') }}">Sign up.</a></small>
+    {% endif %}
 </div>
 {% endblock body %}

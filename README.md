@@ -15,5 +15,6 @@ This is a password manager written in python meant to be run as a personal on lo
 
 - First make sure you have at least python 3.6 or later
 - Run `setup_db.py`
+- Change `app.secret_key` in `src/__init__.py` to a secret key
 - Run `pip install -r requirements.txt` in a venv (or not), use `pip3` if needed
 - Run `python app.py`, use `python3` if needed
