@@ -1,0 +1,36 @@
+/* Used for Login and Signup */
+.input-field {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: large;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 6px;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.form {
+  border: 1px solid lightgrey;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.submit {
+  font-family: "Open Sans";
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: medium;
+  background-color: #252323;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

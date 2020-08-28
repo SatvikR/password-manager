@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+{% endblock head %}
 {% block body %}
 <div class="container">
-    <h1>Login</h1>
+    <h1>Login:</h1>
+    <form method="POST" class="form">
+        <label for="username">Username</label>
+        <input type="text" placeholder="ex. username123" class="input-field">
+        <label for="password">Password</label>
+        <input type="password" placeholder="ex. password123" class="input-field">
+        <input type="submit" value="Submit" class="submit">
+    </form>
+    <small>Don't have an account? <a href="{{ url_for('signup') }}">Sign up.</a></small>
 </div>
 {% endblock body %}
