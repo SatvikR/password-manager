@@ -11,3 +11,4 @@ __pycache__/
 # secret files
 secret_key.txt
 test.py
+.env.*
