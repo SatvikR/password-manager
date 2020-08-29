@@ -1,0 +1,26 @@
+/* Used in your_passwords.html */
+
+.passwords {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.passwords th,
+td {
+  border: 1px solid lightgray;
+  text-align: left;
+  padding: 5px 0 5px 10px;
+}
+
+.passwords td {
+  padding: 15px 0 15px 10px;
+}
+
+.view-password {
+  text-decoration: none;
+  background-color: #252323;
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 100px;
+  border-radius: 5px;
+}
