@@ -15,6 +15,9 @@ def add_password():
         website = request.form['website']
         password = request.form['password']
 
+        if website[:4] != 'http': # Turn website into a real url
+            website = 'http://' + website
+
         hashed_password = b64encode(password.encode()).decode()
 
         target_user = query(f"""SELECT id

@@ -33,3 +33,7 @@ td {
   margin-top: 25px;
   margin-right: 10px;
 }
+
+.identifier {
+  visibility: collapse;
+}
