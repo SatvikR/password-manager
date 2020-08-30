@@ -11,15 +11,9 @@ This is a password manager written in python meant to be run on localhost.
 - Flask
 - Sqlite
 
+Please do not use the executable in the releases tab, it does not work
+
 ## Run locally
-
-### Windows: (Python not required)
-
-- Download `password-manager-win32.zip` from the releases tab
-- Unzip and run the `app.exe` executable
-- Go to http://localhost:3000
-
-### Linux/Mac (Python v3.6 or later required)
 
 - First make sure you have at least python 3.6 or later
 - Run `setup_db.py`
