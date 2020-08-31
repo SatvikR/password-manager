@@ -20,15 +20,15 @@ def add_password():
 
         hashed_password = b64encode(password.encode()).decode()
 
-        target_user = query(f"""SELECT id
+        target_user = query("""SELECT id
                         FROM users
-                        WHERE username='{session['username']}'""")
+                        WHERE username=?""", [session['username']])
 
         uid, = target_user[0] # Destructuring query
 
-        query(f"""INSERT INTO passwords
+        query("""INSERT INTO passwords
                 (uid, website, password)
-                VALUES ({uid}, '{website}', '{hashed_password}')""")
+                VALUES (?, ?, ?)""", [uid, website, hashed_password])
         
         return redirect(url_for('your_passwords'))
     else:

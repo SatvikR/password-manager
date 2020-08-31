@@ -13,9 +13,13 @@ def view_password(id):
 	if 'username' not in session:
 		return redirect(url_for('login'))
 
-	password = query(f"""SELECT website, password
+	password = query("""SELECT website, password 
 						FROM passwords
-						WHERE id={id}""")
+						WHERE uid IN (
+							SELECT id
+							FROM users
+							WHERE username=?)
+						AND id=?""", [session['username'], id])
 	
 	if not len(password): # Password not found
 		return redirect(url_for('your_passwords'))

@@ -16,9 +16,9 @@ def signup():
         username = request.form['username']
         password = request.form['password']
 
-        user_exists_check = query(f"""SELECT *
+        user_exists_check = query("""SELECT *
                                         FROM users
-                                        WHERE username = '{username}'""")
+                                        WHERE username = ?""", [username])
         
         if len(user_exists_check):
             flash('User already exists')
@@ -26,9 +26,9 @@ def signup():
         
         hashed_password = hashpw(password.encode(), gensalt(14))
 
-        query(f"""INSERT INTO USERS
+        query("""INSERT INTO USERS
                 (username, password)
-                VALUES ('{username}', '{hashed_password.decode()}')""")     
+                VALUES (?, ?)""", [username, hashed_password.decode()])     
         
         session['username'] = username
         

@@ -17,8 +17,8 @@ def your_passwords():
                 if split_key[0] == 'delete':
                     id = split_key[1]
 
-            query(f"""DELETE FROM passwords
-                    WHERE id={id}""")   
+            query("""DELETE FROM passwords
+                    WHERE id=?""", [id])   
             
             return redirect(url_for('your_passwords'))
         return redirect(url_for('your_passwords'))
@@ -26,13 +26,13 @@ def your_passwords():
         if 'username' not in session: # User not logged in
             return redirect(url_for('login'))
 
-        passwords = query(f"""SELECT id, website
+        passwords = query("""SELECT id, website
                                 FROM passwords
                                 WHERE uid IN (
                                     SELECT id
                                     FROM users
-                                    WHERE username='{session['username']}'
-                                )""")
+                                    WHERE username=?
+                                )""", [session['username']])
         
         context = {
             'passwords': [list(row) for row in passwords]

@@ -21,9 +21,9 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        target_user = query(f"""SELECT username, password 
+        target_user = query("""SELECT username, password 
                                 FROM users 
-                                WHERE username='{username}'""")
+                                WHERE username=?""", [username])
         
         if not len(target_user): # User not found
             flash('Username not found')
