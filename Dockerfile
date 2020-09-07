@@ -12,10 +12,8 @@ RUN python setup_db.py
 
 COPY . .
 
-ENV FLASK_ENV=development
-ENV FLASK_RUN_PORT=3000
-ENV FLASK_APP=src
+ENV FLASK_ENV=production
 
 EXPOSE 3000
 
-CMD [ "flask", "run" ]
+CMD [ "python", "app.py" ]
